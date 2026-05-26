@@ -9,6 +9,7 @@ import NovoChamadoPublico from './pages/NovoChamadoPublico';
 import Estoque from './pages/Estoque';
 import Cancelamentos from './pages/Cancelamentos';
 import Login from './pages/Login';
+import AceitarConvite from './pages/AceitarConvite';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
@@ -73,6 +74,13 @@ const PublicOrAuthenticatedRouter = () => {
     return (
       <Routes>
         <Route path="/login" element={<Login />} />
+      </Routes>
+    );
+  }
+  if (pathname === '/aceitar-convite') {
+    return (
+      <Routes>
+        <Route path="/aceitar-convite" element={<AceitarConvite />} />
       </Routes>
     );
   }
